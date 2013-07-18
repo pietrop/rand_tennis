@@ -1,0 +1,30 @@
+#buttons{
+	margin-top: 150px;
+	margin-left: 150px;
+	text-align: center;
+	width: 600px;
+}
+
+#buttons button{
+	margin-left: 100px;
+}
+
+/*#game-points table, tr, th{
+	border: 1px solid black;
+}
+
+#game-points{
+
+	margin-left: 500px;
+	margin-top: 50px;
+}*/
+
+#points-score{
+	margin-bottom: 100px;
+	margin-left: 100px;
+	
+}
+
+
+
+

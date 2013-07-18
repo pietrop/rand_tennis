@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--links to the CSS in bootstrap -->
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!--not sure what line below does -->
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!--links to jquery on remote repository -->
+	 <script src="http://code.jquery.com/jquery.js"></script>
+ 	<!-- more links on boostrap java script -->
+	  <script src="./bootstrap/js/bootstrap.min.js"></script>
+   	 <script src="./Player.js"></script>
+   	 <script src="./Game.js"></script>
+
+   	 <link href="style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<div id="buttons">
+		<h1>Points</h1><h1 id="points-score">0-0</h1>
+		<button class="btn btn-success" id="forehand" type="button"><h5>forehand</h5></button>
+		<button class="btn btn-primary" id ="backhand" type="button"><h5>backhand</h5> </button>
+		<button class="btn btn-warning" id ="dropshot" type="button"><h5>dropshot</h5> </button>
+	</div>
+
+	<div id="buttons">
+		<button class="btn btn-danger" id ="start" type="button">Start </button>
+	</div>
+
+	<script>
+		var start = document.getElementById('start');
+		start.addEventListener('click',function(){
+			p1= new Player("Alex");
+			p2 = new Player("Pietro");
+   	 		game = new Game(p1, p2);
+		});
+
+		var forehand = document.getElementById('forehand');
+		forehand.addEventListener('click', function(){
+
+			jQuery.post('/shoot', {shot: 'forehand'})
+
+		});
+
+		var backhand = document.getElementById('backhand');
+
+
+		var dropshot = document.getElementById('dropshot');
+
+
+
+	</script>
+
+
+</body>
+</html>
+
